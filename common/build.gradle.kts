@@ -26,6 +26,11 @@ kotlin {
             isStatic = true
         }
     }
+
+    js(IR) {
+        browser()
+        binaries.library()
+    }
     
     sourceSets {
         commonMain.dependencies {
