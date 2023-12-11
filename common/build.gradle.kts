@@ -28,7 +28,12 @@ kotlin {
     }
 
     js(IR) {
-        browser()
+        browser{
+            compilations["main"].packageJson {
+                name = "@neolivz/my-package"
+                version = "1.0.0"
+            }
+        }
         binaries.library()
     }
     
